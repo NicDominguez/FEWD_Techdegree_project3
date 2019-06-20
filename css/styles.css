@@ -3,6 +3,7 @@
 
 * {
     font-family: 'Merriweather', serif;
+    box-sizing: border-box;
 }
 
 /* feildset normalization */
@@ -32,11 +33,16 @@ form {
     display: flex;
     flex-flow: column nowrap;
     max-width: 768px;
+    padding: 6px 6px;
+    border-radius: 20px;
+    background-color: azure;
+
 }
 
 .banner {
     text-align: center;
     border-bottom: #2d3945 5px solid;
+    margin: 0 auto;
     padding-bottom: 20px;
     color: grey;
     font-size: 0.9em;
@@ -73,13 +79,15 @@ legend {
     font-size: 0.9em;
 }
 
-.contact_info input,select {
+.contact_info input,
+.contact_info select {
     margin-bottom: 4px;
     height: 40px;
-    padding: 5px 10px;
     background-color: #eff0f1;
     border: none;
     border-radius: 5px;
+    border: rgba(70,99,139,0.0) 3px solid;
+    transition: border 0.75s ease-in 0s, background-color 0.75s ease-in 0s;
 }
 
 .contact_info input::placeholder {
@@ -92,17 +100,17 @@ legend {
     text-align: left;
 }
 
-/* .contact_info select option:first-of-type:placeholder-shown { 
-    color: gray; 
-} */
-
 .contact_info input:last-of-type {
     width: 40%;
     max-width: 150px;
 }
 
-.contact_info input:focus, select:focus {
-    border: #46698b 2px solid;
+.contact_info input:focus, 
+select:focus, 
+.newsletter textarea:focus {
+    border: rgba(70,99,139,1.0) 3px solid;
+    transition: border 0.75s ease-in 0s, background-color 0.75s ease-in 0s;
+    background-color: white;
 }
 
 .newsletter {
@@ -135,9 +143,10 @@ legend {
     height: 150px;
     background-color: #eff0f1;
     margin: 7px 0 25px 0;
-    border: none;
+    border: rgba(70,99,139,0.0) 3px solid;
     padding: 5px 10px;
     border-radius: 5px;
+    transition: border 0.75s ease-in 0s, background-color 0.75s ease-in 0s;
 }
 
 button {
@@ -160,7 +169,8 @@ footer {
 /* Desktop Media Query Break */
 @media screen and (min-width: 768px) {
     form {
-        margin: 20px auto;
+        margin: 0 auto;
+        padding: 20px;
     }
 
     .contact_info {
