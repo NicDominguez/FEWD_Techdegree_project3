@@ -37,8 +37,8 @@ form {
 
 .banner {
     text-align: center;
+    margin: 20px 20px 2px 20px;
     border-bottom: #2d3945 5px solid;
-    margin: 15px 10px 0px 10px;
     padding-bottom: 10px;
     color: grey;
     font-size: 0.9em;
@@ -52,19 +52,30 @@ form {
     color: #2d3945;
 }
 
-.contact_info {
-    margin: 5px 10px 20px 10px;
-    padding: 0;
-    border: none;
-    border-top: #2d3945 2px solid;
+hr {
+    height: 10px;
+}
+
+.flex_wrapper {
+    clear: left;
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: 20px;
+}
+
+.contact_info {
+    padding: 10px 0 0 0;
+    margin: 0 20px;
+    border: none;
+    border-top: #2d3945 2px solid;
 }
 
 legend {
     font-size: 1.1em;
     color: #2d3945;
     font-weight: 700;
+    margin-bottom: 10px;
+    float: left;
 }
 
 .contact_info label {
@@ -113,10 +124,9 @@ select:focus,
 }
 
 .newsletter {
-    margin: 5px 10px 20px 10px;
     border-top: #2d3945 2px solid;
-    display: flex;
-    flex-flow: column nowrap;
+    padding: 10px 0 0 0;
+    margin: 0 20px;
     color: grey;
     font-size: 0.9em;
     background-color: snow;
@@ -143,7 +153,6 @@ select:focus,
 .newsletter textarea {
     height: 150px;
     background-color: #eff0f1;
-    margin: 7px 0 25px 0;
     border: rgba(70,99,139,0.0) 3px solid;
     padding: 5px 10px;
     border-radius: 5px;
@@ -155,6 +164,7 @@ button {
     color: white;
     font-size: 1.3em;
     background-color: darkturquoise;
+    margin: 0 20px;
     border: none;
     border-radius: 5px;
 }
@@ -164,37 +174,49 @@ footer {
     color: grey;
     font-style: italic;
     font-size: 0.8em;
-    margin: 40px 0 75px 0;
+    margin: 20px 0 75px 0;
 }
 
 /* Desktop Media Query Break */
 @media screen and (min-width: 768px) {
     form {
         margin: 0 auto;
-        padding: 20px;
+        padding: 3px 20px 20px 20px;
     }
 
-    .contact_info {
-        display: flex;
+    .contact_info,
+    .newsletter {
+        margin: 0;
+        padding-top: 30px
+    }
+    legend {
+        margin-bottom: 20px;
+    }
+
+    .contact_info .flex_wrapper {
         flex-flow: row wrap;
-    }
-
-    .contact_info legend{
-        width: 100%;
     }
 
     .contact_info label {
         width: 20%;
-        margin-right: 30px;
+        margin-right: 5%;
     }
 
     .contact_info input, .contact_info select {
-        width: 72%;
+        width: 75%;
         margin-bottom: 15px;
     }
 
     .newsletter textarea {
-        margin-bottom: 40px;
         height: 150px;
+    }
+
+    .newsletter_type_options,
+    .newsletter_format_options {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin: 0;
     }
 }
