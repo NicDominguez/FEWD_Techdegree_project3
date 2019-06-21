@@ -29,19 +29,17 @@ h1 {
 }
 
 form {
-    margin: 20px 5px;
     display: flex;
     flex-flow: column nowrap;
     max-width: 768px;
-    padding: 8px 8px;
     border-radius: 20px;
 }
 
 .banner {
     text-align: center;
     border-bottom: #2d3945 5px solid;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    margin: 15px 10px 0px 10px;
+    padding-bottom: 10px;
     color: grey;
     font-size: 0.9em;
 }
@@ -55,8 +53,8 @@ form {
 }
 
 .contact_info {
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 5px 10px 20px 10px;
+    padding: 0;
     border: none;
     border-top: #2d3945 2px solid;
     display: flex;
@@ -65,15 +63,13 @@ form {
 
 legend {
     font-size: 1.1em;
-    padding: 40px 0 20px 0;
     color: #2d3945;
     font-weight: 700;
-    float: left;
 }
 
 .contact_info label {
     color: grey;
-    margin: 20px 0 10px 0;
+    margin: 10px 0 10px 0;
     font-size: 0.9em;
 }
 
@@ -88,9 +84,14 @@ legend {
     transition: border 0.75s ease-in 0s, background-color 0.75s ease-in 0s;
 }
 
-.contact_info input::placeholder {
+.contact_info input::placeholder,
+.newsletter textarea::placeholder {
     font-style: italic;
     font-size: 0.8em;
+    text-align: left;
+}
+
+.contact_info input:nth-of-type(-n+2)::placeholder {
     text-align: right;
 }
 
@@ -112,6 +113,7 @@ select:focus,
 }
 
 .newsletter {
+    margin: 5px 10px 20px 10px;
     border-top: #2d3945 2px solid;
     display: flex;
     flex-flow: column nowrap;
